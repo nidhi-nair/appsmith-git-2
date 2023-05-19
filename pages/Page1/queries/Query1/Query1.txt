@@ -1,3 +1,8 @@
-UPDATE users
-  SET status = 'APPROVED'
-  WHERE id = {{ usersTable.selectedRow.id }};
+INSERT INTO users
+  (name, gender, email)
+VALUES
+  (
+    {{ nameInput.text }},
+    {{ genderDropdown.selectedOptionValue }},
+    {{ emailInput.text }}
+  );
